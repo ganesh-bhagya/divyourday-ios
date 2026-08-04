@@ -9,11 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            
+            Text("Welcome to")
+            
+            Text("Diveyourday")
+                .font(.system(size: 42))
+                .foregroundStyle(Color("PrimaryGreen"))
+                .fontWeight(.bold)
+            
+            Button {
+            } label: {
+                Text("Let's Go")
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color("PrimaryGreen"))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                
+            }
+            
         }
         .padding()
     }

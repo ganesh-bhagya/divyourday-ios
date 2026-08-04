@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct DivyourdayApp: App {
+    
+    
+    private let appContainer = AppContainer()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView(viewModel: appContainer.makeLoginViewModel())
         }
     }
 }

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+
+struct Session: Codable {
+    let accessToken: String
+    let user: User?
+}

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+protocol SessionManagerProtocol {
+    var currentSession: Session? { get }
+
+    func save(_ session: Session)
+
+    func clear()
+}

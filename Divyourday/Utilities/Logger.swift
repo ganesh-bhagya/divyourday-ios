@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+
+enum Logger {
+
+    static func network(_ message: String) {
+        #if DEBUG
+        print(message)
+        #endif
+    }
+}

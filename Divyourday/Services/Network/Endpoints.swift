@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum Endpoints {
+    
+    static let baseUrl = "http://192.168.1.3:3001/api/v1/"
+    
+    static let login = "auth/login"
+}

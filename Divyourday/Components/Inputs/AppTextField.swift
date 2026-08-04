@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct AppTextField: View {
+    
+    let title: String
+    let placeholder: String
+    
+    
+    @Binding var text: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.subheadline)
+                .fontWeight(.medium)
+            
+            TextField(placeholder, text: $text)
+                .padding()
+                .background(Color(.white))
+                .clipShape(RoundedRectangle(cornerRadius: 14))
+        }
     }
 }
 
 #Preview {
-    AppTextField()
+    @Previewable @State var email = ""
+
+       AppTextField(
+           title: "Email address",
+           placeholder: "you@example.com",
+           text: $email
+       )
+       .padding()
 }

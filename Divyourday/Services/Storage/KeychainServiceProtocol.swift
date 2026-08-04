@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+protocol KeychainServiceProtocol {
+ 
+    func save(_ data: Data, for key: String) throws
+    
+    func retrieve(for key: String) throws -> Data?
+    
+    func delete(for key: String) throws
+}
+

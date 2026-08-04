@@ -15,7 +15,7 @@ struct DivyourdayApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView(viewModel: appContainer.makeLoginViewModel())
+            AppRouter(container: appContainer, sessionmanger: appContainer.sessionManager)
         }
     }
 }
